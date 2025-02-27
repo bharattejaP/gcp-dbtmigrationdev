@@ -4,4 +4,4 @@ CREATE OR REPLACE TABLE `retaildummy.myfourthmodel` AS SELECT
 SUM(ap.PickedPieces) AS TotalSales
 FROM retaildummy.vfactActualPieces ap
 JOIN retaildummy.vdimDate d ON ap.dimActualDayDateKey = d.dimDateKey
-GROUP BY FiscalWeek, Warehouse;
+GROUP BY FiscalWeek, Warehouse limit 10;
