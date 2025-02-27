@@ -6,4 +6,4 @@ SELECT
 FROM retaildummy.vfactActualPieces as ap
 JOIN retaildummy.vdimDate as d 
     ON ap.dimActualDayDateKey = d.dimDateKey
-GROUP BY d.FiscalYear_week, ap.dimWarehouseKey;
+GROUP BY d.FiscalYear_week, ap.dimWarehouseKey
