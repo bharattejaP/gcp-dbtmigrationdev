@@ -1,8 +1,6 @@
-{{ 
-    config(
-        materialized='table'  -- Change to 'view' or 'incremental' if needed
-    ) 
-}}
+{{ config(
+    materialized = "table"
+) }}
 
 SELECT 
     d.FiscalYear_week AS FiscalWeek,
@@ -11,4 +9,4 @@ SELECT
 FROM {{ ref('vfactActualPieces') }} ap
 JOIN {{ ref('vdimDate') }} d 
     ON ap.dimActualDayDateKey = d.dimDateKey
-GROUP BY FiscalWeek, Warehouse;
+GROUP BY d.FiscalYear_week, ap.dimWarehouseKey;
