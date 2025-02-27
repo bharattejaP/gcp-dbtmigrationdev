@@ -1,6 +1,8 @@
-{{ config(
-    materialized='table'  -- Change to 'view' or 'incremental' if needed
-) }}
+{{ 
+    config(
+        materialized='table'  -- Change to 'view' or 'incremental' if needed
+    ) 
+}}
 
 SELECT 
     d.FiscalYear_week AS FiscalWeek,
