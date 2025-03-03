@@ -1,4 +1,3 @@
-CREATE VIEW retaildummy.vfactHoursEfficiency AS
 SELECT
     p.dimBusinessDayDateKey,
     p.dimWarehouseKey,

@@ -1,4 +1,3 @@
-CREATE VIEW retaildummy.vfactPiecesPerHour AS
 SELECT
     a.dimActualDayDateKey,
     a.dimWarehouseKey,
