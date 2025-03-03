@@ -1,4 +1,3 @@
-CREATE OR REPLACE MATERIALIZED VIEW retaildummy.vfactPlanHours_Agg AS
 SELECT
     dimBusinessDayDateKey,
     dimWarehouseKey,
@@ -23,6 +22,6 @@ SELECT
     SUM(IHOtherProd) AS TotalIHOtherProd,
     SUM(IHOtherOH) AS TotalIHOtherOH,
     SUM(IHOther) AS TotalIHOther,
-    SUM(IH_Overhead_Other_PH) AS TotalIHOverheadOtherPH  -- Fixed column name
+    SUM(IH_Overhead_Other_PH) AS TotalIHOverheadOtherPH
 FROM retaildummy.vfactPlanHours
 GROUP BY dimBusinessDayDateKey, dimWarehouseKey, dimWarehouseHierarchyKey;
