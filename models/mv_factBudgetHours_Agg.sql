@@ -1,0 +1,26 @@
+SELECT
+    dimBudgetDayDateKey,
+    dimWarehouseKey,
+    dimWarehouseHierarchyKey,
+    SUM(SAFE_CAST(PaidHours AS INT64)) AS TotalPaidHours,
+    SUM(SAFE_CAST(BudgetEffectiveHours AS INT64)) AS TotalBudgetEffectiveHours,
+    SUM(SAFE_CAST(StandardHours AS INT64)) AS TotalStandardHours,
+    SUM(SAFE_CAST(ManPowerHours AS INT64)) AS TotalManPowerHours,
+    SUM(SAFE_CAST(ManagementOfficeHours AS INT64)) AS TotalManagementOfficeHours,
+    SUM(SAFE_CAST(ServiceHours AS INT64)) AS TotalServiceHours,
+    SUM(SAFE_CAST(EducationHours AS INT64)) AS TotalEducationHours,
+    SUM(SAFE_CAST(OtherEffectiveHours AS INT64)) AS TotalOtherEffectiveHours,
+    SUM(SAFE_CAST(BudgetIneffectiveProdHours AS INT64)) AS TotalBudgetIneffectiveProdHours,
+    SUM(SAFE_CAST(BudgetIneffectiveOHHours AS INT64)) AS TotalBudgetIneffectiveOHHours,
+    SUM(SAFE_CAST(BudgetIneffectiveHours AS INT64)) AS TotalBudgetIneffectiveHours,
+    SUM(SAFE_CAST(VacationProdHours AS INT64)) AS TotalVacationProdHours,
+    SUM(SAFE_CAST(VacationOHHours AS INT64)) AS TotalVacationOHHours,
+    SUM(SAFE_CAST(VacationHours AS INT64)) AS TotalVacationHours,
+    SUM(SAFE_CAST(IllnessProdHours AS INT64)) AS TotalIllnessProdHours,
+    SUM(SAFE_CAST(IllnessOHHours AS INT64)) AS TotalIllnessOHHours,
+    SUM(SAFE_CAST(IllnessHours AS INT64)) AS TotalIllnessHours,
+    SUM(SAFE_CAST(OtherInEffectiveProdHours AS INT64)) AS TotalOtherInEffectiveProdHours,
+    SUM(SAFE_CAST(OtherInEffectiveOHHours AS INT64)) AS TotalOtherInEffectiveOHHours,
+    SUM(SAFE_CAST(OtherInEffectiveHours AS INT64)) AS TotalOtherInEffectiveHours
+FROM retaildummy.vfactBudgetHours
+GROUP BY dimBudgetDayDateKey, dimWarehouseKey, dimWarehouseHierarchyKey
