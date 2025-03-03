@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE retaildummy.vfactActualHours_Agg AS
+CREATE OR REPLACE VIEW retaildummy.vfactActualHours_Agg AS
 SELECT
     PARSE_DATE('%Y%m%d', CAST(dimWorkDayDateKey AS STRING)) AS dimWorkDayDateKey, 
     dimWarehouseKey,
