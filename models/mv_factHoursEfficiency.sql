@@ -14,4 +14,4 @@ FULL OUTER JOIN mimetic-setup-451414-e7.retaildummy.mv_factActualHours_Agg
  a 
 ON p.dimBusinessDayDateKey = a.dimWorkDayDateKey
 AND p.dimWarehouseKey = a.dimWarehouseKey
-AND p.dimWarehouseHierarchyKey = a.dimWarehouseHierarchyKey;
+AND p.dimWarehouseHierarchyKey = a.dimWarehouseHierarchyKey
