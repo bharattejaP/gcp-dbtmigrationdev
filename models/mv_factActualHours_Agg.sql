@@ -1,4 +1,3 @@
-CREATE OR REPLACE VIEW `mimetic-setup-451414-e7.retaildummy.vfactActualHours_Agg AS
 SELECT
     PARSE_DATE('%Y%m%d', CAST(dimWorkDayDateKey AS STRING)) AS dimWorkDayDateKey, 
     dimWarehouseKey,
@@ -24,5 +23,5 @@ SELECT
     SUM(IHVacationOH) AS TotalIHVacationOH,
     SUM(IHOtherProd) AS TotalIHOtherProd,
     SUM(IHOtherOH) AS TotalIHOtherOH
-FROM `mimetic-setup-451414-e7.retaildummy.vfactActualHours
+FROM retaildummy.vfactActualHours
 GROUP BY dimWorkDayDateKey, dimWarehouseKey, dimWarehouseHierarchyKey;
