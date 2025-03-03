@@ -1,5 +1,5 @@
 SELECT
-    PARSE_DATE('%Y%m%d', CAST(dimWorkDayDateKey AS STRING)) AS dimWorkDayDateKey, 
+    dimWorkDayDateKey, 
     dimWarehouseKey,
     dimWarehouseHierarchyKey,
     SUM(ActualHours) AS TotalActualHours,

@@ -1,5 +1,5 @@
 SELECT
-    PARSE_DATE('%Y%m%d', CAST(dimActualDayDateKey AS STRING)) AS dimActualDayDateKey,
+    dimActualDayDateKey,
     dimWarehouseKey,
     dimWarehouseHierarchyKey,
     SUM(PiecesAWToRW) AS TotalPiecesAWToRW,
