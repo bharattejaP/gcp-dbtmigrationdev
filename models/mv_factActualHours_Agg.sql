@@ -1,3 +1,4 @@
+CREATE OR REPLACE MATERIALIZED table retaildummy.vfactPlanHours_Agg AS
 SELECT
     PARSE_DATE('%Y%m%d', CAST(dimWorkDayDateKey AS STRING)) AS dimWorkDayDateKey, 
     dimWarehouseKey,
