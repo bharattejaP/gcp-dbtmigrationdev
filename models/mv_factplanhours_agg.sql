@@ -24,4 +24,4 @@ SELECT
     SUM(IHOther) AS TotalIHOther,
     SUM(IH_Overhead_Other_PH) AS TotalIHOverheadOtherPH
 FROM retaildummy.vfactPlanHours
-GROUP BY dimBusinessDayDateKey, dimWarehouseKey, dimWarehouseHierarchyKey;
+GROUP BY dimBusinessDayDateKey, dimWarehouseKey, dimWarehouseHierarchyKey

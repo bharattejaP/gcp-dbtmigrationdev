@@ -10,4 +10,4 @@ SELECT
     SUM(PiecesMOQ2) AS TotalPiecesMOQ2,
     SUM(PiecesAW) AS TotalPiecesAW
 FROM retaildummy.vfactPlanPieces
-GROUP BY dimPlanDayDateKey, dimWarehouseKey, dimWarehouseHierarchyKey;
+GROUP BY dimPlanDayDateKey, dimWarehouseKey, dimWarehouseHierarchyKey
