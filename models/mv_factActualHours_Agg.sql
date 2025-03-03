@@ -24,4 +24,4 @@ SELECT
     SUM(IHOtherProd) AS TotalIHOtherProd,
     SUM(IHOtherOH) AS TotalIHOtherOH
 FROM retaildummy.vfactActualHours
-GROUP BY dimWorkDayDateKey, dimWarehouseKey, dimWarehouseHierarchyKey;
+GROUP BY dimWorkDayDateKey, dimWarehouseKey, dimWarehouseHierarchyKey
