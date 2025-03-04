@@ -27,6 +27,6 @@ SELECT
     pa.OtherInEffectiveHoursACT,
     pa.EffectiveHoursACT
 FROM
-    PreAggregated pa
+    AggregatedActualHours pa
 JOIN
     retaildummy.vdimWarehouseFinanceHierarchy_deduplicated wh ON pa.dimWarehouseHierarchyKey = wh.dimWarehouseFinanceHierarchyKey
